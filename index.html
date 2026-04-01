@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Essence</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap" rel="stylesheet">
+ <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"/>   
+    <!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<!-- AOS JS -->
+
+
+    
+</head>
+
+<body>
+  <div class="free">
+    
+<p>Free standard shipping on all orders!</p>
+<p>Free returns within 30 days</p>
+<span>Free standard shipping on all orders!</span>
+<span>Free returns within 30 days</span>
+
+</div>
+    <header class="navbar">
+  <div class="logo">MyBrand</div>
+
+  <!-- Hamburger toggle -->
+  <div class="toggle-2">
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav>
+    <ul class="goll">
+      <li><a href="#">SHOP</a></li>
+      <li><a href="#">LOOKBOOK</a></li>
+      <li><a href="#">SALE</a></li>
+    </ul>
+
+    <ul class="navbar-right">
+      <li>
+        <select id="currency" name="currency">
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="GBP">GBP</option>
+          <option value="JPY">JPY</option>
+          <option value="CNY">CNY</option>
+          <option value="INR">INR</option>
+          <option value="NGN">NGN</option>
+        </select>
+      </li>
+      <li><a href="#"><i class="ri-search-line"></i></a></li>
+      <li title="SIGN-UP"><a href="#"><i class="ri-user-line"></i></a></li>
+      <li title="ADD TO CART"><a href="#"><i class="ri-shopping-bag-line"></i></a></li>
+    </ul>
+  </nav>
+
+  <script>
+    const toggle = document.querySelector(".toggle-2");
+const nav = document.querySelector("nav");
+
+toggle.addEventListener("click", () => {
+  nav.classList.toggle("active");
+  toggle.classList.toggle("active"); // this triggers the X animation
+});
+  </script>
+</header>
+
+<div class="carousel">
+<video src="/video/pexels-media-6735420.mp4" loop muted autoplay></video>
+<h1 id="scrollText">COUTURE</h1>
+<u>DISCOVER THE COLLECTION</u>
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+</svg>
+</div>
+<script>
+    const text = document.getElementById("scrollText");
+
+    window.addEventListener("scroll", () => {
+      let scrollY = window.scrollY;
+      let maxScroll = document.body.scrollHeight - window.innerHeight;
+      let progress = scrollY / maxScroll;
+
+      // Scale effect: grows big then shrinks
+      let scale = progress < 0.5 
+                  ? 1 + progress * 8   // from 1 → 5
+                  : 5 - (progress - 0.5) * 9; // from 5 → 0.5
+
+      text.style.transform = `translate(-50%, -50%) scale(${scale})`;
+
+    });
+  </script>
+
+<div class="row g-0">
+  <div class="col-6 first-image">
+   <img src="/image/65c3e7ff-a192-4411-b423-8ea58c8545d2.jpg" alt="">
+   <h2 data-aos="slide-up">NEW SKIRT</h2>
+   <h3 data-aos="fade-up" data-aos-delay="300">SHOP NEW COLLECTION</h3>
+  </div>
+  
+   <div class="col-6 first-image">
+  <img src="/image/셀럽들의 선택, DINT.jpg" alt="">
+  <h2 data-aos="slide-up">BLAZERS</h2>
+  <h3 data-aos="fade-up" data-aos-delay="300">SHOP NEW COLLECTION</h3>
+   </div>
+</div>
+
+
+<div class="best-seller">
+<h1>OUR BEST SELLER</h1>
+</div>
+<div class="overall">
+<div class="first-card">
+<img data-aos="fade-up" src="/image/7f177e51-44f4-4c3c-b643-7079432a5c63.jpg" alt="">
+<div class="first-box">
+<h3>New</h3>
+</div>
+<h6>NIFE</h6>
+<h4>Brown flared skirt with high waist</h4>
+<p>$400.00</p>
+<div class="first-circle"></div>
+</div>
+<div class="first-card">
+<img data-aos="fade-up" data-aos-delay="200" src="/image/TIE WAIST BLAZER.jpg" alt="">
+<h6>NIFE</h6>
+<h4> Cobalt blazers with wide-down leg</h4>
+<p>$100.00</p>
+<div class="first-circle1"></div>
+</div>
+<div class="first-card">
+<img data-aos="fade-up" data-aos-delay="400" src="/image/abugu.mp4.jpg" alt="">
+<h6>NIFE</h6>
+<h4>Beige blazers with brown bag</h4>
+<p>$300.00</p>
+<div class="two-circle">
+<div class="first-circle2"></div>
+<div class="first-circle3"></div>
+</div>
+</div>
+<div class="first-card">
+  <img  data-aos="fade-up" data-aos-delay="600" src="/image/08a95a7e-29f1-445e-a8f9-76a91a49d86e.jpg" alt="">
+  <h6>NIFE</h6>
+<h4>Ivory white long-fitted gown</h4>
+<p>$300.00</p>
+<div class="first-circle4"></div>
+</div>
+</div>
+
+<div class="view">
+<h3>VIEW ALL</h3>
+</div>
+
+<div class="big-box position-relative ">
+<h6>Nile Collection</h6>
+<h1>NEW SPRING LOOK</h1>
+<video src="/video/pexels-media-6476829.mp4" autoplay muted loop></video>
+<h3> <a href="">VIEW ALL COLLECTION </a></h3>
+<div class="slider-container">
+  <div class="slider-track">
+    <div class="rect">
+      <img src="/image/66265ddb-cdb8-47d8-a30c-3f19b90e6dba.jpg" alt="">
+      <div class="nife">
+      <h6>NIFE</h6>
+      <div class="tt">
+      <p>Blue Fitted dress</p> <div class="bo"><i class="ri-shopping-bag-line"></i></div></div>
+      <span>$80.00</span></div>
+    </div>
+    <div class="rect">
+      <img src="/image/99e87782-efc6-4698-927c-e8d6c6328d39.jpg" alt=""><div class="nife">
+      <h6>NIFE</h6>
+      <div class="tt">
+      <p>Blue Fitted dress</p> <div class="bo"><i class="ri-shopping-bag-line"></i></div></div>
+      <span>$80.00</span></div>
+
+    </div>
+    <div class="rect">
+      <img src="/image/9d24622f-bdef-4911-8618-4329c633b855.jpg" alt="">
+      <div class="nife">
+      <h6>NIFE</h6>
+      <div class="tt">
+      <p>Blue Fitted dress</p> <div class="bo"><i class="ri-shopping-bag-line"></i></div></div>
+      <span>$80.00</span></div>
+    </div>
+    <div class="rect">
+      <img src="/image/44b2f8b6-f061-4a05-a85e-f64bbdab1104.jpg" alt="">
+      <div class="nife">
+      <h6>NIFE</h6>
+      <div class="tt">
+      <p>Blue Fitted dress</p> <div class="bo"><i class="ri-shopping-bag-line"></i></div></div>
+      <span>$80.00</span></div>
+    </div>
+    <div class="rect">
+      <img src="/image/2b8aea40-9559-4b02-99ea-0883514db2d1.jpg" alt="">
+      <div class="nife">
+      <h6>NIFE</h6>
+      <div class="tt">
+      <p>Blue Fitted dress</p> <div class="bo"><i class="ri-shopping-bag-line"></i></div></div>
+      <span>$80.00</span></div>
+    </div>
+
+    <!-- duplicate rectangles for smooth looping -->
+    <div class="rect">
+      <img src="/image/7f177e51-44f4-4c3c-b643-7079432a5c63.jpg" alt="">
+      <div class="nife">
+      <h6>NIFE</h6>
+      <div class="tt">
+      <p>Blue Fitted dress</p> <div class="bo"><i class="ri-shopping-bag-line"></i></div></div>
+      <span>$80.00</span></div>
+    </div>
+    <div class="rect">
+      <img src="/image/1681d69d-6f61-46b4-961e-ffd9186a0557.jpg" alt="">
+      <div class="nife">
+      <h6>NIFE</h6>
+      <div class="tt">
+      <p>Blue Fitted dress</p> <div class="bo"><i class="ri-shopping-bag-line"></i></div></div>
+      <span>$80.00</span></div>
+    </div>
+    <div class="rect">
+      <img src="/image/9d24622f-bdef-4911-8618-4329c633b855.jpg" alt="">
+      <div class="nife">
+      <h6>NIFE</h6>
+      <div class="tt">
+      <p>Blue Fitted dress</p> <div class="bo"><i class="ri-shopping-bag-line"></i></div></div>
+      <span>$80.00</span></div>
+    </div>
+    <div class="rect">
+      <img src="/image/37f0e596-3c93-40f3-9e2e-aba9b77aacbd.jpg" alt="">
+      <div class="nife">
+      <h6>NIFE</h6>
+      <div class="tt">
+      <p>Blue Fitted dress</p> <div class="bo"><i class="ri-shopping-bag-line"></i></div></div>
+      <span>$80.00</span></div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="card mb-3 " id="blue">
+  <div class="row g-0">
+    <div class="col-md-4 h-100" id="image-holder">
+      <img src="/image/How to Sew an A-Line Skirt.jpg" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8" id="blun">
+      <div class="card-body">
+        <h5 class="card-title">NIFE</h5>
+        <p class="card-text">Caramel palazzo <br>pants</p>
+        <p class="card-text"><small class="text-body-secondary">$60.00</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="autumn">
+<h6>Autumn/Winter</h6>
+<h1>CAMPAIGN STYLES</h1>
+</div>
+<div class="row second-box g-0">
+  <div class="col-4 mgl">
+   <img src="/image/Clothing __ LICHI - Online fashion store.jpg" alt="">
+   <h3 data-aos="slide-left">CASUAL DRESS BY MOE</h3>
+   <p data-aos="slide-left" data-aos-delay="100">Unlock the Secrets of Casual Dress</p>
+   <span data-aos="slide-left" data-aos-delay="200">CHECK NOW</span>
+  </div>
+  <div class="col-4 mgl">
+   <img src="/image/e76aa194-96bc-4fff-8ec3-ac2da3540046.jpg" alt="">
+   <h3 data-aos="slide-left">MODERN ELEGANT</h3>
+   <p data-aos="slide-left" data-aos-delay="100">The new season is on the horizon</p>
+   <span data-aos="slide-left" data-aos-delay="200">CHECK NOW</span>
+  </div>
+  <div class="col-4 mgl">
+   <img src="/image/2b8aea40-9559-4b02-99ea-0883514db2d1.jpg" alt="">
+   <h3 data-aos="slide-left">GLAMOUR</h3>
+   <p data-aos="slide-left" data-aos-delay="100">it's time to refresh with closet staples</p>
+   <span data-aos="slide-left" data-aos-delay="200">CHECK NOW</span>
+  </div>
+  </div>
+  
+  <div class="discover">
+  <p>Discover the best deal</p>
+  <h1>SALE UP TO 50% <br> FOR ALL <br> COLLECTIONS</h1>
+  <button>CHECK NOW</button>
+  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+</svg>
+</div>
+
+<div class="explore">
+<p>Explore the newest trends</p>
+<h1>From elegant dresses
+  
+   <div class="inline-image">
+    <img src="/image/dfa784e5-8223-4240-9da7-826d9cd29796.jpg" alt="">
+   </div>to chic <br> skirts
+   
+<div class="inline-image">
+  <img src="/image/44b2f8b6-f061-4a05-a85e-f64bbdab1104.jpg" alt="">
+</div> and cozy <div class="inline-image">
+  <img src="/image/1681d69d-6f61-46b4-961e-ffd9186a0557.jpg" alt="">
+</div> jumpers!</h1>
+<a href="" class="collection-link">VIEW ALL COLLECTIONS</a>
+</div>
+
+<div class=" row cosy g-0 position-relative">
+  <div class="col-6 cosy-l">
+   <img src="/image/Natural New Obsession Draped Top.jpg" alt="">
+   <div class="most">
+   <h6>Most-loved collections</h6>
+   <h1>COSY & <br> COMFORT</h1>
+   <button><a href="">DISCOVER NOW </a></button>
+  </div>
+  </div>
+
+  <div class="col-6 cosy-ll">
+   <img src="/image/4948193c-208a-499e-b0ab-0ed6f22a4f61.jpg" alt="">
+  </div>
+</div>
+
+
+<div class="tiktok">
+<span>Tik Tok</span>
+<h1>INSPIRATION</h1>
+</div>
+<div class="carousel-wrapper">
+<div class="tik">
+  
+  <div class="tok">
+    
+<img src="/image/셀럽들의 선택, DINT (1).jpg" alt="">
+</div>
+ <div class="tok">
+<img src="/image/Abiti da Cerimonia.jpg" alt="">
+</div>
+ <div class="trish">
+<video src="/video/pexels-media-8328721.mp4" mute loop autoplay></video>
+<div class="card mb-3" style="width: 240px; height: 120px;" id="red">
+    <div class="col-md-4" id="bery">
+      <img src="/image/37f0e596-3c93-40f3-9e2e-aba9b77aacbd.jpg" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body" id="straw">
+        <h5 class="card-title">MOE</h5>
+        <p class="card-text mt-1">A detachable dress at the waist with pleats</p>
+        <p class="card-text"><small class="text-body-secondary">$70.00</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tok">
+<img src="/image/thel studios, style, fashion, aesthetic, brand, russia, mood, model, photography, instagram, top.jpg" alt="">
+</div>
+ <div class="tok">
+<img src="/image/eeb26159-3ba3-45e2-85f8-86ee1601321a.jpg" alt="">
+</div>
+<div class="tok">
+    
+<img src="/image/셀럽들의 선택, DINT (1).jpg" alt="">
+</div>
+ <div class="tok">
+<img src="/image/Abiti da Cerimonia.jpg" alt="">
+</div>
+ <div class="trish">
+<video src="/video/pexels-media-8328721.mp4" mute loop autoplay></video>
+<div class="card mb-3" style="width: 240px; height: 120px;" id="red">
+    <div class="col-md-4" id="bery">
+      <img src="/image/37f0e596-3c93-40f3-9e2e-aba9b77aacbd.jpg" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body" id="straw">
+        <h5 class="card-title">MOE</h5>
+        <p class="card-text mt-1">A detachable dress at the waist with pleats</p>
+        <p class="card-text"><small class="text-body-secondary">$70.00</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tok">
+<img src="/image/thel studios, style, fashion, aesthetic, brand, russia, mood, model, photography, instagram, top.jpg" alt="">
+</div>
+ <div class="tok">
+<img src="/image/eeb26159-3ba3-45e2-85f8-86ee1601321a.jpg" alt="">
+</div>
+</div>
+</div></div>
+<div class="dots"></div>
+</div>
+
+
+  
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const tik = document.querySelector(".tik");
+    const items = document.querySelectorAll(".tik > div");
+    const itemWidth = 241 + 20; // width + gap
+    let index = 0;
+    let paused = false;
+
+    // ✅ Create dots (fixed number, e.g., 5)
+    const dotsContainer = document.createElement("div");
+    dotsContainer.classList.add("dots");
+    document.querySelector(".carousel-wrapper").appendChild(dotsContainer);
+
+    const totalDots = 5; // change this number to reduce/increase dots
+    for (let i = 0; i < totalDots; i++) {
+      const dot = document.createElement("span");
+      if (i === 0) dot.classList.add("active");
+      dotsContainer.appendChild(dot);
+    }
+    const dots = dotsContainer.querySelectorAll("span");
+
+    // Pause carousel when an item is clicked
+    items.forEach(item => {
+      item.addEventListener("click", () => {
+        paused = !paused; // toggle pause on click
+      });
+    });
+
+    function slideAndZoom() {
+      if (!paused) {
+        // Reset zoom on all items
+        items.forEach(el => {
+          const media = el.querySelector("img, video");
+          if (media) media.style.transform = "scale(1)";
+        });
+
+        // Slide to current item
+        tik.style.transform = `translateX(-${index * itemWidth}px)`;
+
+        // Zoom current item
+        const current = items[index].querySelector("img, video");
+        if (current) current.style.transform = "scale(1.1)";
+
+        // Return to normal size after 2 seconds
+        setTimeout(() => {
+          if (current) current.style.transform = "scale(1)";
+        }, 2000);
+
+        // ✅ Update dots (map index to dot)
+        const dotIndex = index % dots.length;
+        dots.forEach(dot => dot.classList.remove("active"));
+        dots[dotIndex].classList.add("active");
+
+        index++;
+
+        // Seamless reset after first set
+        if (index >= items.length / 2) {
+          setTimeout(() => {
+            tik.style.transition = "none"; // instant reset
+            tik.style.transform = "translateX(0)";
+            index = 0;
+            tik.offsetHeight; // force reflow
+            tik.style.transition = "transform 1s ease-in-out";
+          }, 1000);
+        }
+      }
+
+      setTimeout(slideAndZoom, 2000); // every 2 seconds
+    }
+
+    slideAndZoom();
+  });
+</script>
+
+
+
+<div class="vogue">
+<h1>VOGUE</h1>
+<h3>"A brand that challenges the industry. A brand that has a chance to <br>stage 
+  a revolution. A brand whose creators see it as a step towards a <br>better world"
+</h3>
+</div>
+<div class="fashion">
+<p>Fashion Blog</p>
+<h1>JOURNAL</h1>
+</div>
+<div class="journal">
+  <div class="september">
+<img src="/image/9d24622f-bdef-4911-8618-4329c633b855.jpg" alt="">
+<h3>SEPTEMBER 19,2024</h3>
+<h2>HOW TO DRESS FOR THE <br>OFFICE?</h2>
+<p>The right outfit for the office can sometimes be a <br>challenge...</p>
+<a href="">READ MORE</a>
+</div>
+  <div class="september">
+<img src="/image/Beautiful Runway Model, Black Haute Couture Dress _ Zazzle_com.jpg" alt="">
+<h3> SEPTEMBER 19,2024</h3>
+<h2>HOW TO CHOOSE THE RIGHT <br> SKIRT LENGTH? </h2>
+<p>The right skirt length can enhance your figure...</p>
+<a href="">READ MORE</a>
+</div>
+<div class="september">
+<img src="/image/91d6e301-ba35-4254-97c9-f53ecfbafee2.jpg" alt="">
+<h3>SEPTEMBER 19,2024</h3>
+<h2>BLAZER AND OFFICE STYLE</h2>
+<p>The blazer is a staple piece in office fashion...</p>
+<a href="">READ MORE</a>
+</div>
+</div>
+
+<div class="journal-slider">
+  <!-- Slide 1 -->
+  <div class="journal-card">
+    <img src="/image/9d24622f-bdef-4911-8618-4329c633b855.jpg" alt="">
+    <div class="journal-content">
+      <p class="date">SEPTEMBER 19, 2024</p>
+      <h2>HOW TO CHOOSE THE RIGHT SKIRT LENGTH?</h2>
+      <p class="desc">The right skirt length can enhance your figure...</p>
+      <a href="#">READ MORE</a>
+    </div>
+  </div>
+
+  <!-- Slide 2 -->
+  <div class="journal-card">
+    <img src="/image/Beautiful Runway Model, Black Haute Couture Dress _ Zazzle_com.jpg" alt="">
+    <div class="journal-content">
+      <p class="date">SEPTEMBER 19, 2024</p>
+      <h2>HOW TO CHOOSE THE RIGHT SKIRT LENGTH?</h2>
+      <p class="desc">The right skirt length can enhance your figure...</p>
+      <a href="#">READ MORE</a>
+    </div>
+  </div>
+
+  <div class="journal-card">
+    <img src="/image/91d6e301-ba35-4254-97c9-f53ecfbafee2.jpg" alt="">
+    <div class="journal-content">
+      <p class="date">SEPTEMBER 19,2024</p>
+      <h2>BLAZER AND OFFICE STYLE</h2>
+      <p class="desc">The blazer is a staple piece in office fashion...</p>
+      <a href="#">READ MORE</a>
+    </div>
+  </div>
+
+  <!-- Navigation arrows -->
+  <button class="prev">❮</button>
+  <button class="next">❯</button>
+</div>
+
+<script>
+  let slideIndex = 0;
+showSlides(slideIndex);
+
+function showSlides(n) {
+  let slides = document.querySelectorAll(".journal-card");
+  if (n >= slides.length) slideIndex = 0;
+  if (n < 0) slideIndex = slides.length - 1;
+
+  slides.forEach(s => s.style.display = "none");
+  slides[slideIndex].style.display = "block";
+}
+
+document.querySelector(".prev").onclick = () => {
+  slideIndex--;
+  showSlides(slideIndex);
+};
+
+document.querySelector(".next").onclick = () => {
+  slideIndex++;
+  showSlides(slideIndex);
+};
+
+</script>
+
+
+<div class="logo">
+<img src="/image/Alphabet_Logos_And_Initial_Designs___AI_Logo_Maker-removebg-preview (1).png" alt="">
+<img src="/image/Interior_Design_Logo_Ideas__Make_Your_Own_Logo___Looka-removebg-preview.png" alt="">
+<img src="/image/SN_luxury_fashion_logo___Premium_Vector-removebg-preview.png" alt="">
+<img src="/image/_Logo Design Services for Every Budget – Make Your Mark_.jpg" alt="">
+<img src="/image/You_Searched_For_Eyelashes-removebg-preview.png" alt="">
+</div>
+<div class="join">
+<h3>JOIN OUR NEWSLETTER</h3>
+<p>Be the first to know about new collections and exclusive offers.</p>
+<form class="row g-3">
+  
+  <div class="col-auto" id="email">
+    <label for="inputPassword2" class="visually-hidden"></label>
+    <input type="password" class="form-control" id="inputPassword2" placeholder="Email">
+  </div>
+  <div class="col-auto" id="blo">
+    <button type="submit" class="btn btn-dark mb-3">SUBSCRIBE</button>
+  </div>
+</form>
+</div>
+
+<div class="product">
+  <div class="products">
+    <h3>PRODUCTS</h3>
+    <span>Dress</span>
+    <p>Blazer</p>
+    <p>Skirt</p>
+    <p>Trousers</p>
+    <p>Jumpers</p>
+</div>
+  <div class="products">
+    <h3>SERVICE</h3>
+    <span>FAQ</span>
+    <p>Shipping</p>
+    <p>Contact</p>
+    </div>
+
+    <div class="products">
+      <h3>INFORMATION</h3>
+      <span>About Us</span>
+      <p>Return and Refunds</p>
+      <p>Legal Area</p>
+    </div>
+
+    <div class="products">
+     <h3>ABOUT US</h3>
+     <span>We could not have created this demo without the help <br> of an 
+    amazing source of content and products. Visit <br> our <u>about page</u> to 
+   find out where all the products <br> used in the demo care from.</span>
+    </div>
+     </div>
+
+     
+  
+
+
+  <div class="accordion">
+    <div class="accordion-header">
+      PRODUCTS <span>+</span>
+    </div>
+    <div class="accordion-content">
+      <p>Product 1</p>
+      <p>Product 2</p>
+      <p>Product 3</p>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-header">
+      SERVICE <span>+</span>
+    </div>
+    <div class="accordion-content">
+      <p>Service 1</p>
+      <p>Service 2</p>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-header">
+      INFORMATION <span>+</span>
+    </div>
+    <div class="accordion-content">
+      <p>FAQ</p>
+      <p>Shipping</p>
+      <p>Returns</p>
+    </div>
+  </div>
+  
+
+  <div class="produce">
+     <h3>ABOUT US</h3>
+     <span>We could not have created this demo without the help <br> of an 
+    amazing source of content and products. Visit <br> our <u>about page</u> to 
+   find out where all the products <br> used in the demo care from.</span>
+    </div>
+
+  <script>
+    const headers = document.querySelectorAll(".accordion-header");
+
+    headers.forEach(header => {
+      header.addEventListener("click", () => {
+        const content = header.nextElementSibling;
+        header.classList.toggle("active");
+
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+          content.classList.remove("show");
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+          content.classList.add("show");
+        }
+      });
+    });
+  </script>
+
+
+
+<div class="notes">
+
+<select id="go" name="currency">
+  <option value="USD">USD - United States </option>
+  <option value="EUR">EUR - Euro</option>
+  <option value="GBP">GBP - British Pound</option>
+  <option value="JPY">JPY - Japanese Yen</option>
+  <option value="INR">INR - Indian Rupee</option>
+  <option value="AUD">AUD - Australian Dollar</option>
+  <option value="CAD">CAD - Canadian Dollar</option>
+  <option value="CNY">CNY - Chinese Yuan</option>
+  <option value="ZAR">ZAR - South African Rand</option>
+  </select>
+<div class="tig">
+<i class="ri-facebook-fill" ></i>
+<i class="ri-twitter-x-line"></i>
+<i class="ri-instagram-line"></i>
+<i class="ri-pinterest-fill"></i>
+<i class="ri-tiktok-fill"></i></div>
+
+
+<div class="lol">
+<img src="/image/Fonts Used In Famous Logos (With Download Links).jpg" alt="">
+<img src="/image/Mastercard.jpg" alt="">
+<img src="/image/PayPal Logo.jpg" alt="">
+<img src="/image/Amex oferece espaço Beach Area na sua sala VIP - Cartões, Milhas e Viagens.jpg" alt="">
+<img src="/image/Financial business logo _ Premium Vector.jpg" alt="">
+</div>
+</div>
+
+<div class="cout">
+<h1>COUTURE</h1>
+</div>
+<!-- AOS CSS -
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,  // animation duration (ms)
+    easing: 'ease-out-cubic',
+         // whether animation happens only once
+  });
+</script>
+
+
+</body>
+<script src="/js/bootstrap.bundle.js"></script>
+</html>
