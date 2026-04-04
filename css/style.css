@@ -591,7 +591,9 @@ nav {
   .logo{
     margin-top: 2.2rem !important;
   }
-  
+  form{
+    padding-left: 1rem;
+  }
 }
 
 @media (max-width:1024px){

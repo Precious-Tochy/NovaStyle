@@ -14,11 +14,6 @@
     rel="stylesheet"/>   
     <!-- AOS CSS -->
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-<!-- AOS JS -->
-
-
-    
 </head>
 
 <body>
@@ -63,16 +58,6 @@
       <li title="ADD TO CART"><a href="#"><i class="ri-shopping-bag-line"></i></a></li>
     </ul>
   </nav>
-
-  <script>
-    const toggle = document.querySelector(".toggle-2");
-const nav = document.querySelector("nav");
-
-toggle.addEventListener("click", () => {
-  nav.classList.toggle("active");
-  toggle.classList.toggle("active"); // this triggers the X animation
-});
-  </script>
 </header>
 
 <div class="carousel">
@@ -83,23 +68,7 @@ toggle.addEventListener("click", () => {
   <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
 </svg>
 </div>
-<script>
-    const text = document.getElementById("scrollText");
 
-    window.addEventListener("scroll", () => {
-      let scrollY = window.scrollY;
-      let maxScroll = document.body.scrollHeight - window.innerHeight;
-      let progress = scrollY / maxScroll;
-
-      // Scale effect: grows big then shrinks
-      let scale = progress < 0.5 
-                  ? 1 + progress * 8   // from 1 → 5
-                  : 5 - (progress - 0.5) * 9; // from 5 → 0.5
-
-      text.style.transform = `translate(-50%, -50%) scale(${scale})`;
-
-    });
-  </script>
 
 <div class="row g-0">
   <div class="col-6 first-image">
@@ -396,84 +365,6 @@ toggle.addEventListener("click", () => {
 <div class="dots"></div>
 </div>
 
-
-  
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const tik = document.querySelector(".tik");
-    const items = document.querySelectorAll(".tik > div");
-    const itemWidth = 241 + 20; // width + gap
-    let index = 0;
-    let paused = false;
-
-    // ✅ Create dots (fixed number, e.g., 5)
-    const dotsContainer = document.createElement("div");
-    dotsContainer.classList.add("dots");
-    document.querySelector(".carousel-wrapper").appendChild(dotsContainer);
-
-    const totalDots = 5; // change this number to reduce/increase dots
-    for (let i = 0; i < totalDots; i++) {
-      const dot = document.createElement("span");
-      if (i === 0) dot.classList.add("active");
-      dotsContainer.appendChild(dot);
-    }
-    const dots = dotsContainer.querySelectorAll("span");
-
-    // Pause carousel when an item is clicked
-    items.forEach(item => {
-      item.addEventListener("click", () => {
-        paused = !paused; // toggle pause on click
-      });
-    });
-
-    function slideAndZoom() {
-      if (!paused) {
-        // Reset zoom on all items
-        items.forEach(el => {
-          const media = el.querySelector("img, video");
-          if (media) media.style.transform = "scale(1)";
-        });
-
-        // Slide to current item
-        tik.style.transform = `translateX(-${index * itemWidth}px)`;
-
-        // Zoom current item
-        const current = items[index].querySelector("img, video");
-        if (current) current.style.transform = "scale(1.1)";
-
-        // Return to normal size after 2 seconds
-        setTimeout(() => {
-          if (current) current.style.transform = "scale(1)";
-        }, 2000);
-
-        // ✅ Update dots (map index to dot)
-        const dotIndex = index % dots.length;
-        dots.forEach(dot => dot.classList.remove("active"));
-        dots[dotIndex].classList.add("active");
-
-        index++;
-
-        // Seamless reset after first set
-        if (index >= items.length / 2) {
-          setTimeout(() => {
-            tik.style.transition = "none"; // instant reset
-            tik.style.transform = "translateX(0)";
-            index = 0;
-            tik.offsetHeight; // force reflow
-            tik.style.transition = "transform 1s ease-in-out";
-          }, 1000);
-        }
-      }
-
-      setTimeout(slideAndZoom, 2000); // every 2 seconds
-    }
-
-    slideAndZoom();
-  });
-</script>
-
-
-
 <div class="vogue">
 <h1>VOGUE</h1>
 <h3>"A brand that challenges the industry. A brand that has a chance to <br>stage 
@@ -546,32 +437,6 @@ toggle.addEventListener("click", () => {
   <button class="next">❯</button>
 </div>
 
-<script>
-  let slideIndex = 0;
-showSlides(slideIndex);
-
-function showSlides(n) {
-  let slides = document.querySelectorAll(".journal-card");
-  if (n >= slides.length) slideIndex = 0;
-  if (n < 0) slideIndex = slides.length - 1;
-
-  slides.forEach(s => s.style.display = "none");
-  slides[slideIndex].style.display = "block";
-}
-
-document.querySelector(".prev").onclick = () => {
-  slideIndex--;
-  showSlides(slideIndex);
-};
-
-document.querySelector(".next").onclick = () => {
-  slideIndex++;
-  showSlides(slideIndex);
-};
-
-</script>
-
-
 <div class="logo">
 <img src="/image/Alphabet_Logos_And_Initial_Designs___AI_Logo_Maker-removebg-preview (1).png" alt="">
 <img src="/image/Interior_Design_Logo_Ideas__Make_Your_Own_Logo___Looka-removebg-preview.png" alt="">
@@ -626,9 +491,6 @@ document.querySelector(".next").onclick = () => {
      </div>
 
      
-  
-
-
   <div class="accordion">
     <div class="accordion-header">
       PRODUCTS <span>+</span>
@@ -669,29 +531,7 @@ document.querySelector(".next").onclick = () => {
    find out where all the products <br> used in the demo care from.</span>
     </div>
 
-  <script>
-    const headers = document.querySelectorAll(".accordion-header");
-
-    headers.forEach(header => {
-      header.addEventListener("click", () => {
-        const content = header.nextElementSibling;
-        header.classList.toggle("active");
-
-        if (content.style.maxHeight) {
-          content.style.maxHeight = null;
-          content.classList.remove("show");
-        } else {
-          content.style.maxHeight = content.scrollHeight + "px";
-          content.classList.add("show");
-        }
-      });
-    });
-  </script>
-
-
-
-<div class="notes">
-
+  <div class="notes">
 <select id="go" name="currency">
   <option value="USD">USD - United States </option>
   <option value="EUR">EUR - Euro</option>
@@ -723,9 +563,9 @@ document.querySelector(".next").onclick = () => {
 <div class="cout">
 <h1>COUTURE</h1>
 </div>
-<!-- AOS CSS -
 
-<!-- AOS JS -->
+
+
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init({
@@ -737,5 +577,7 @@ document.querySelector(".next").onclick = () => {
 
 
 </body>
+<script src="/js/script.js"></script>
 <script src="/js/bootstrap.bundle.js"></script>
+
 </html>
